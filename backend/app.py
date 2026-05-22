@@ -135,25 +135,6 @@ def create_jira():
 
 
 # ---------------- RUN APP ---------------- #
+import os
 
-
-    data = request.json
-    bugs = data.get("bugs", [])
-
-    tickets = []
-
-    for i, bug in enumerate(bugs):
-
-        tickets.append({
-            "key": f"FP-{101+i}",
-            "title": bug,
-            "status": "Open",
-            "priority": "High" if i == 0 else "Medium"
-        })
-
-    return jsonify({
-        "success": True,
-        "tickets": tickets
-    })
-if __name__ == "__main__":
-    app.run(debug=True)
+app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
