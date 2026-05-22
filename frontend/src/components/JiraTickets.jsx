@@ -14,7 +14,7 @@ export default function JiraTickets({ bugs, appId }) {
             setLoading(true);
 
             const res = await axios.post(
-                "http://localhost:5000/create-jira",
+                "https://featurepulse-cls3.onrender.com/create-jira",
                 {
                     bugs,
                     appId

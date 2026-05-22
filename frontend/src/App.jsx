@@ -21,7 +21,7 @@ export default function App() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/analyze",
+        "https://featurepulse-cls3.onrender.com/analyze",
         {
           appId: appId.trim(),
         }

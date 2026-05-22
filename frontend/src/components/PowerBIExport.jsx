@@ -9,7 +9,7 @@ export default function PowerBIExport({ appId }) {
             setStatus("Exporting...");
 
             window.open(
-                `http://localhost:5000/export-csv/${appId}`,
+                `https://featurepulse-cls3.onrender.com/export-csv/${appId}`,
                 "_blank"
             );
 

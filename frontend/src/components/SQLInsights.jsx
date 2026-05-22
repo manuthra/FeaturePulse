@@ -6,7 +6,7 @@ export default function SQLInsights({ appId }) {
   const [insights, setInsights] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/sql-insights/${appId}`)
+    axios.get(`https://featurepulse-cls3.onrender.com/sql-insights/${appId}`)
       .then(res => { if (res.data.success) setInsights(res.data.data); });
   }, [appId]);
 
